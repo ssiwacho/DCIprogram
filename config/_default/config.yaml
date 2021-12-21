@@ -1,0 +1,43 @@
+baseURL: https://demo.gethugothemes.com/geeky/
+title: Geeky | Hugo Personal Blog Template
+theme: geeky-hugo
+languageName: En
+languageCode: en-us
+paginate: '6'
+summaryLength: '20'
+googleAnalytics: ''
+disqusShortname: themefisher-template
+disableLanguages: fr
+module:
+  hugoVersion:
+    extended: yes
+    min: 0.87.0
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+    - WebAppManifest
+imaging:
+  quality: 90
+caches:
+  assets:
+    dir: :resourceDir/_gen
+    maxAge: 720h
+  images:
+    dir: :resourceDir/_gen
+    maxAge: 720h
+markup:
+  goldmark:
+    renderer:
+      unsafe: yes
+mediaTypes:
+  application/manifest+json:
+    suffixes: webmanifest
+  text/netlify:
+    delimiter: ''
+    suffixes: ''
+outputFormats:
+  WebAppManifest:
+    mediaType: application/manifest+json
+    rel: manifest
